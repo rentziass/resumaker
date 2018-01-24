@@ -1,0 +1,10 @@
+#! /bin/zsh
+
+$PWD/scripts/build_image
+
+image_name="registry.gitlab.com/rentziass/go_docker_sample:$(git describe --tags)"
+docker push $image_name
+
+eval $(docker-machine env blog)
+docker-compose up --no-deps -d app
+eval "$(docker-machine env -u)"

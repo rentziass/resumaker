@@ -1,0 +1,4 @@
+#! /bin/zsh
+
+echo "Building Go binary..."
+docker run --rm -v "$PWD:/go/src/app" golang:1.9.2 /bin/bash -c 'cd /go/src/app; CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .'

@@ -1,0 +1,4 @@
+#! /bin/zsh
+
+docker run --rm -it -p "3000:3000" -v "$PWD:/go/src/app" golang:1.9.2
+

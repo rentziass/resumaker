@@ -1,0 +1,4 @@
+#! /bin/zsh
+
+echo "Importing certificate..."
+docker run --rm -v "$PWD:/go/src/app" golang:1.9.2 /bin/bash -c 'cd /go/src/app; cp /etc/ssl/certs/ca-certificates.crt $PWD/ca-certificates.crt'
