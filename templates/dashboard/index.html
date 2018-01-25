@@ -1,0 +1,26 @@
+<h1>Profile</h1>
+
+<%= form_for(current_user, {action: dashboardPath(), method: "PUT"}) { %>
+<div class="row">
+  <div class="col-6 col-xs-12">
+    <%= f.InputTag("FirstName") %>
+  </div>
+  <div class="col-6 col-x2-12">
+    <%= f.InputTag("LastName") %>
+  </div>
+  <div class="col-12">
+    <%= f.InputTag("Address") %>
+  </div>
+  <div class="col-8">
+    <%= f.InputTag("City") %>
+  </div>
+  <div class="col-2">
+    <%= f.InputTag("Province", {label: "Province/State"}) %>
+  </div>
+  <div class="col-2">
+    <%= f.InputTag("ZipCode") %>
+  </div>
+  <button class="btn btn-success">Save</button>
+</div>
+<% } %>
+

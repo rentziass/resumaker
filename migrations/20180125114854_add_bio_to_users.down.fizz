@@ -1,0 +1,7 @@
+drop_column("users", "first_name")
+drop_column("users", "last_name")
+drop_column("users", "address")
+drop_column("users", "city")
+drop_column("users", "province")
+drop_column("users", "zip_code")
+drop_column("users", "country")

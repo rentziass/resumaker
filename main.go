@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/rentziass/resumaker/actions"
+)
 
 func main() {
-	fmt.Println("vim-go")
+	app := actions.App()
+	if err := app.Serve(); err != nil {
+		log.Fatal(err)
+	}
 }

@@ -1,0 +1,13 @@
+development:
+  dialect: postgres
+  database: resumaker_development
+  user: {{envOr "POSTGRES_USER" "postgres"}}
+  password: {{envOr "POSTGRES_PASSWORD" "postgres"}}
+  host: {{envOr "POSTGRES_HOST" "127.0.0.1"}}
+  pool: 5
+
+test:
+  url: {{envOr "TEST_DATABASE_URL" "postgres://postgres:postgres@127.0.0.1:5432/resumaker_test?sslmode=disable"}}
+
+production:
+  url: {{envOr "DATABASE_URL" "postgres://postgres:postgres@127.0.0.1:5432/resumaker_production?sslmode=disable"}}
